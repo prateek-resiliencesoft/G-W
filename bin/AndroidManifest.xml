@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ipl"
+    package="com.indinconceptors.g_w"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -19,11 +19,11 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.indinconceptors.g_w.MainActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".DesignActivity"
+            android:name="com.indinconceptors.g_w.DesignActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,17 +33,17 @@
              
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.indinconceptors.g_w.LoginActivity"
             android:label="@string/app_name" >
            
         </activity>
         <activity
-            android:name=".Dashboard"
+            android:name="com.indinconceptors.g_w.Dashboard"
             android:label="@string/app_name" >
             
         </activity>
         <activity
-            android:name=".History"
+            android:name="com.indinconceptors.g_w.History"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -55,21 +55,21 @@
             android:value="@string/APP_ID" />
 
         <activity
-            android:name=".TeamActivity"
+            android:name="com.indinconceptors.g_w.TeamActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".BetActivity"
+            android:name="com.indinconceptors.g_w.BetActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".MoreResultActivity"
+            android:name="com.indinconceptors.g_w.MoreResultActivity"
             android:label="@string/title_activity_more_result" >
             
             
         </activity>
         <activity
-            android:name=".SingleTeamActivity"
+            android:name="com.indinconceptors.g_w.SingleTeamActivity"
             android:label="@string/title_activity_single_team" >
             
         </activity>

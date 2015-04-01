@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" 
     android:background="@drawable/bg"   
-     tools:context="com.example.ipl.LoginActivity" 
+     tools:context="com.indinconceptors.g_w.LoginActivity" 
     tools:ignore="TextFields" >
 
     <LinearLayout

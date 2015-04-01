@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" 
      android:background="@drawable/images"
-     tools:context="com.example.ipl.BetActivity"
+     tools:context="com.indinconceptors.g_w.BetActivity"
     tools:ignore="TextFields" >
 
     <LinearLayout
