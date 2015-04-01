@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+     android:background="#0d8390" xmlns:tools="http://schemas.android.com/tools">
+    
+    
+    
+    
+    
+    
+    <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:orientation="vertical"
+               tools:ignore="UselessParent">
+           <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1" />      
+        <TextView
+            android:id="@+id/txtselectedteam"
+            android:layout_width="84dp"
+            android:layout_height="25dp"
+            android:gravity="top"
+            android:text=""
+            tools:ignore="HardcodedText" />
+        
+         <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1" />
+
+              <EditText
+                  android:id="@+id/edmatch1"
+                  android:layout_width="150dp"
+                  android:layout_height="45dp"
+                  android:background="@drawable/blankbox"
+                  android:ems="10"
+                  android:gravity="center"
+                  android:hint="Enter Point"
+                  tools:ignore="HardcodedText" >
+
+             <requestFocus />
+         </EditText>
+             <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnbet"
+                        android:layout_width="112dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/brownbox"
+                        
+                        android:text="Bet"
+                        tools:ignore="HardcodedText" />
+    
+ <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+ 
+  <TextView
+      android:id="@+id/txtshowmsginlayout"
+      android:layout_width="78dp"
+      android:layout_height="25dp"
+      android:gravity="top"
+      android:text=""
+      tools:ignore="HardcodedText" />
+  
+  <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+  
+  <TextView
+      android:id="@+id/textshowamount"
+      android:layout_width="82dp"
+      android:layout_height="25dp"
+      android:layout_marginRight="@+id/txtshowmsginlayout"
+      android:text="" />
+
+<View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+         </LinearLayout>
+
+    
+             
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+     android:background="@drawable/images"
+    tools:ignore="TextFields" 
+    tools:context="com.example.ipl.Dashboard" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf,UselessParent" >
+
+                <TextView
+                    android:id="@+id/txtmatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="#0ADBF7"  
+                    
+                    android:gravity="center"
+                    android:text="Dashboard"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf,UselessParent" >
+
+                <TextView                    
+                    android:id="@+id/txtnewbet"              
+                    android:layout_width="136dp"
+                    android:layout_height="25dp"
+                   android:background="#F70A0A"
+                    android:gravity="center"
+                    android:text="New Bet"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+    <ListView
+        android:id="@+id/listuserdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+                
+    </ListView>
+    
+    
+    
+    
+    
+<!--     <LinearLayout -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:gravity="right" -->
+<!--         android:orientation="horizontal"       -->
+<!--         tools:ignore="UselessLeaf,UselessParent" > -->
+<!--       <View -->
+<!--              android:layout_width="0dp" -->
+<!--              android:layout_height="match_parent" -->
+<!--              android:layout_weight=".20" /> -->
+             
+
+<!--       <ImageView -->
+<!--                  android:id="@+id/userimage" -->
+<!--                 android:layout_width="70dp" -->
+<!--                 android:layout_height="70dp" -->
+<!--                 android:background="#0ADBF7"                   -->
+<!--                 android:layout_gravity="left" -->
+<!--                 android:adjustViewBounds="true" -->
+<!--                 android:scaleType="fitCenter" /> -->
+      
+      
+      
+                
+<!--              <View -->
+<!--              android:layout_width="0dp" -->
+<!--              android:layout_height="match_parent" -->
+<!--              android:layout_weight=".20" /> -->
+                                             
+<!--             </LinearLayout> -->
+    
+    
+<!--     <LinearLayout -->
+<!--         android:layout_width="fill_parent" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:gravity="right" -->
+<!--          android:orientation="horizontal"  -->
+<!--         tools:ignore="UselessLeaf,UselessParent" > -->
+             
+        
+<!--       <View -->
+<!--              android:layout_width="0dp" -->
+<!--              android:layout_height="match_parent" -->
+<!--              android:layout_weight=".20" /> -->
+<!--                 <TextView                     -->
+<!--                     android:id="@+id/txtusername"               -->
+<!--                     android:layout_width="136dp" -->
+<!--                     android:layout_height="25dp" -->
+<!--                    android:background="#F70A0A" -->
+<!--                     android:gravity="center" -->
+<!--                     android:text="New Bet" -->
+<!--                     tools:ignore="HardcodedText" /> -->
+                
+<!--              <View -->
+<!--              android:layout_width="0dp" -->
+<!--              android:layout_height="match_parent" -->
+<!--              android:layout_weight=".20" /> -->
+                
+                
+<!--                 <TextView                     -->
+<!--                     android:id="@+id/txtuserpoint"               -->
+<!--                     android:layout_width="136dp" -->
+<!--                     android:layout_height="25dp" -->
+<!--                    android:background="#F70A0A" -->
+<!--                     android:gravity="center" -->
+<!--                     android:text="New Bet" -->
+<!--                     tools:ignore="HardcodedText" /> -->
+<!--             </LinearLayout> -->
+
+    
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    android:orientation="vertical"
+    tools:context="com.example.ipl.DesignActivity"
+    tools:ignore="TextFields" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_weight="0.89"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf,UselessParent" >
+    <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight=".20" />
+          
+        <ImageView
+            android:id="@+id/imgman"
+            android:layout_width="154dp"
+            android:layout_height="154dp"
+            android:layout_gravity="center|top"
+            android:adjustViewBounds="true"
+            android:background="@drawable/logo"
+            android:scaleType="fitCenter" />
+
+        
+           <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight=".20" />
+          
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="22dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf,UselessParent" >
+            
+            
+            
+            <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight=".20" />
+
+<!--             <ProgressBar -->
+<!--                 android:id="@+id/progressmain" -->
+<!--                 style="?android:attr/progressBarStyleHorizontal" -->
+<!--                 android:layout_width="131dp" -->
+<!--                 android:layout_height="wrap_content" /> -->
+          
+        </LinearLayout>
+
+        
+        <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight=".20" />
+          
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="118dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf,UselessParent" >
+    </LinearLayout>
+
+</LinearLayout>

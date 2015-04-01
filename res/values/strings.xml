@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IPL</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_design">DesignActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_match">MatchActivity</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_history">History</string>
+    <string name="APP_ID">127605460617602</string>
+    <string name="title_activity_team">TeamActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_bet">BetActivity</string>
+    <string name="title_activity_more_result">MoreResultActivity</string>
+    <string name="title_activity_single_team">SingleTeamActivity</string>
+
+</resources>
