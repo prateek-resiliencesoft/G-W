@@ -68,7 +68,7 @@
                 android:layout_height="70dp"                 
                 android:layout_gravity="left"
                   
-               android:src="@drawable/abc_ab_bottom_transparent_dark_holo"     
+               android:background="@android:color/transparent"    
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
             
@@ -106,7 +106,7 @@
                 android:layout_width="70dp"              
                 android:layout_height="70dp"
                 android:layout_gravity="right"
-                android:src="@drawable/abc_ab_bottom_transparent_dark_holo"
+               android:background="@android:color/transparent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
             <View
@@ -231,22 +231,8 @@
       
      
       
-      
-<!--        <LinearLayout -->
-<!--           android:layout_width="fill_parent" -->
-<!--           android:layout_height="30dp" -->
-<!--           android:background="@drawable/mainbg" -->
-<!--           android:gravity="center" > -->
-<!--        </LinearLayout> -->
-      
-      <ImageView
-                android:id="@+id/imgtransparent"
-                android:layout_width="fill_parent"              
-                android:layout_height="20dp"
-                android:layout_gravity="right"
-                android:src="@drawable/abc_ab_bottom_transparent_dark_holo"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter" />
+ 
+   
       
      
 

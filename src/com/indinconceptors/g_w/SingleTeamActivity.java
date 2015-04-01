@@ -61,7 +61,7 @@ public class SingleTeamActivity extends ActionBarActivity{
 		
 		try{
        	         	     		     	     		
-			adapter=new SingleItem(context, matchid);
+		//	adapter=new SingleItem(context, matchid);
 //			Toast.makeText(SingleTeamActivity.this,matchid.toString() , Toast.LENGTH_LONG).show();
 			
       		
@@ -75,7 +75,7 @@ public class SingleTeamActivity extends ActionBarActivity{
 		{
 			
 			new getresult().execute();
-//			Toast.makeText(SingleTeamActivity.this,"getresult" , Toast.LENGTH_LONG).show(); 
+			Toast.makeText(SingleTeamActivity.this,"getresult" , Toast.LENGTH_LONG).show(); 
 		}
 		else 
 	     {
@@ -98,112 +98,69 @@ public class SingleTeamActivity extends ActionBarActivity{
 		String result=null;
 
 		@Override
-		protected Void doInBackground(Void... params) {			try {
+		protected Void doInBackground(Void... args) {			
+			
+			try {
 				
 				
-				Toast.makeText(SingleTeamActivity.this,"start" , Toast.LENGTH_LONG).show(); 
-				HttpParams param = new BasicHttpParams();				
-				param.setParameter(CoreProtocolPNames.PROTOCOL_VERSION,HttpVersion.HTTP_1_1);
-				httpclient = new DefaultHttpClient(param);				
+				//Toast.makeText(SingleTeamActivity.this,"start" , Toast.LENGTH_LONG).show(); 
+				
+				HttpParams params = new BasicHttpParams();				
+				params.setParameter(CoreProtocolPNames.PROTOCOL_VERSION,HttpVersion.HTTP_1_1);
+				httpclient = new DefaultHttpClient(params);				
 				List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-				nameValuePairs.add(new BasicNameValuePair("accesstoken", accesstoken));
+				nameValuePairs.add(new BasicNameValuePair("accesstoken", "1"));
 				nameValuePairs.add(new BasicNameValuePair("matchid", strbetmatchid));
 				
 				httppostgetsinglerecord.setEntity(new UrlEncodedFormEntity(nameValuePairs,"utf-8"));
 				result = httpclient.execute(httppostgetsinglerecord, new BasicResponseHandler());
-				 Toast.makeText(SingleTeamActivity.this, "tokean:-"+accesstoken+matchid +result, Toast.LENGTH_SHORT).show();
-//				Toast.makeText(SingleTeamActivity.this,"start" , Toast.LENGTH_LONG).show(); 
+				// Toast.makeText(SingleTeamActivity.this, "tokean:-"+accesstoken+matchid +result, Toast.LENGTH_SHORT).show();
+
 			} catch (Exception e)
-			{
-//				Toast.makeText(SingleTeamActivity.this,"error start" , Toast.LENGTH_LONG).show(); 
-				// TODO: handle exception
+			{     // TODO: handle exception
+				Toast.makeText(SingleTeamActivity.this,"error start" , Toast.LENGTH_LONG).show(); 
+				
 			}
 			// TODO Auto-generated method stub
 			
 			return null;
 		}
 		
+		
+		
 		 @Override
 		 protected void onPostExecute(Void result1)
 		 {
 			 super.onPostExecute(result1);
-			 try {
-//				 Toast.makeText(SingleTeamActivity.this," onpost" , Toast.LENGTH_LONG).show();
-				
+			 
+			 
+			 try 
+			 {		
+				 JSONObject jsonObj = new JSONObject(result);	
+				 Toast.makeText(SingleTeamActivity.this, "hii", Toast.LENGTH_SHORT).show();
+				 Toast.makeText(SingleTeamActivity.this,"Data:-"+ result.toString(), Toast.LENGTH_SHORT).show();
+				 
+				 String access_token = "" + jsonObj.get("AccessToken");
+			     String firstteam= ""+jsonObj.get("FirstTeam");
+			     String secondteam= ""+jsonObj.get("SecondTeam");
+
+			     String firstteamLogo= ""+jsonObj.get("FirstTeamLogo");
+			     String secondteamLogo= ""+jsonObj.get("SecondTeamLogo");
+			     			    
+			     Toast.makeText(SingleTeamActivity.this, firstteam+secondteam, Toast.LENGTH_LONG).show();
+			     
+			     
+			    	     				  				    				 
+				 
 			} catch (Exception e) {
-//				Toast.makeText(SingleTeamActivity.this,"error onpost" , Toast.LENGTH_LONG).show();
 				// TODO: handle exception
+				
+				Toast.makeText(SingleTeamActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 			}
-		 }
+			 
+		 }	
+	 }
 		
-	}
-	
-//	public class getresult extends AsyncTask<Void, Void, Void> {
-//	      String result=null;
-//	     
-//	     
-//	     
-//	     
-//			@Override
-//			protected Void doInBackground(Void... arg0) {
-//				// TODO Auto-generated method stub
-//				
-//				try {
-//					
-//					 Toast.makeText(SingleTeamActivity.this,"start" , Toast.LENGTH_LONG).show(); 
-//					HttpParams params = new BasicHttpParams();				
-//					params.setParameter(CoreProtocolPNames.PROTOCOL_VERSION,HttpVersion.HTTP_1_1);
-//					httpclient = new DefaultHttpClient(params);				
-//					List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
-//					nameValuePairs.add(new BasicNameValuePair("accesstoken", accesstoken));
-//					nameValuePairs.add(new BasicNameValuePair("matchid", strbetmatchid));
-//					
-//					httppostgetsinglerecord.setEntity(new UrlEncodedFormEntity(nameValuePairs,"utf-8"));
-//					result = httpclient.execute(httppostgetsinglerecord, new BasicResponseHandler());
-//					 Toast.makeText(SingleTeamActivity.this, "tokean:-"+accesstoken+matchid +result, Toast.LENGTH_SHORT).show();
-//					
-//				} 
-//				catch (Exception e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//				return null;			
-//			}
-	    	
-//			 @Override
-//			 protected void onPostExecute(Void result1)
-//			 {
-//				 super.onPostExecute(result1);
-//				 
-//				 
-//				 try 
-//				 {		
-//					 JSONObject jsonObj = new JSONObject(result);	
-//					 Toast.makeText(SingleTeamActivity.this, "hii", Toast.LENGTH_SHORT).show();
-//					 Toast.makeText(SingleTeamActivity.this,"Data:-"+ result.toString(), Toast.LENGTH_SHORT).show();
-//					 
-//					 
-////				     String msg= ""+jsonObj.get("Message");
-////				     String access_token = "" + jsonObj.get("AccessToken");
-////				     String type=""+jsonObj.get("LoginStatus");
-////				     if(type.equals("true"))
-////				     {
-////				    			
-////							
-////				     }else 
-////				     {
-//////					   Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
-////				     }			     				  				    				 
-//					 
-//				} catch (Exception e) {
-//					// TODO: handle exception
-//					
-//					//Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-//				}
-//				 
-//			 }	
-	//	 }
-	
 	
 
 	

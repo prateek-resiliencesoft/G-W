@@ -158,8 +158,12 @@ public class MoreResultActivity extends ActionBarActivity {
            dialog = new ProgressDialog(MoreResultActivity.this); 
            dialog.setMessage("Loading...."); //Instead of searching you can write loading also or else
            dialog.setIndeterminate(true); 
+           dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
            dialog.setCancelable(true); 
-           dialog.show(); //runuithread can be call
+           dialog.setProgress(0);
+           dialog.setMax(100);
+           dialog.show();
+           int fileSize = 0;
            
         } 
      

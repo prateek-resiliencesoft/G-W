@@ -41,7 +41,7 @@ ProgressBar progress;
 ProgressDialog dialog;
 private int mProgressStatus = 0;
 
-
+private long fileSize = 0;
 Boolean internetactive;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -124,11 +124,14 @@ Boolean internetactive;
 	      protected void onPreExecute() { 
 	    	   	
 	    	   dialog = new ProgressDialog(DesignActivity.this); 
-	           dialog.setMessage("Loading...."); //Instead of searching you can write loading also or else
+	    	   dialog.setMessage("Loading...."); //Instead of searching you can write loading also or else
 	           dialog.setIndeterminate(true); 
+	           dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 	           dialog.setCancelable(true); 
+	           dialog.setProgress(0);
+	           dialog.setMax(100);
 	           dialog.show();
-	        } 
+	           fileSize = 0;	        } 
 			@Override
 			protected Void doInBackground(Void... arg0) {
 				// TODO Auto-generated method stub

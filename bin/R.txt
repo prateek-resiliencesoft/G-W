@@ -396,7 +396,7 @@ int id action_context_bar 0x7f050028
 int id action_menu_divider 0x7f050021
 int id action_menu_presenter 0x7f050022
 int id action_mode_close_button 0x7f05002f
-int id action_settings 0x7f050083
+int id action_settings 0x7f050082
 int id activity_chooser_view_content 0x7f050030
 int id always 0x7f050016
 int id authButton 0x7f05005a
@@ -453,7 +453,6 @@ int id imgone 0x7f05004b
 int id imgonetest 0x7f05005d
 int id imgsecond 0x7f05004c
 int id imgsecondtest 0x7f05005e
-int id imgtransparent 0x7f05007f
 int id imgvs 0x7f05007e
 int id inline 0x7f050007
 int id large 0x7f050002
@@ -511,11 +510,11 @@ int id txtmatch 0x7f050047
 int id txtnewbet 0x7f050055
 int id txtselectedteam 0x7f050079
 int id txtshowmsginlayout 0x7f05007c
-int id txtusername 0x7f050081
-int id txtuserpoint 0x7f050082
+int id txtusername 0x7f050080
+int id txtuserpoint 0x7f050081
 int id up 0x7f05002c
 int id useLogo 0x7f05000e
-int id userimage 0x7f050080
+int id userimage 0x7f05007f
 int id withText 0x7f050017
 int integer abc_max_action_buttons 0x7f0b0000
 int layout abc_action_bar_decor 0x7f030000

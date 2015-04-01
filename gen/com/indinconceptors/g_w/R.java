@@ -1411,7 +1411,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050021;
         public static final int action_menu_presenter=0x7f050022;
         public static final int action_mode_close_button=0x7f05002f;
-        public static final int action_settings=0x7f050083;
+        public static final int action_settings=0x7f050082;
         public static final int activity_chooser_view_content=0x7f050030;
         public static final int always=0x7f050016;
         public static final int authButton=0x7f05005a;
@@ -1468,7 +1468,6 @@ containing a value of this type.
         public static final int imgonetest=0x7f05005d;
         public static final int imgsecond=0x7f05004c;
         public static final int imgsecondtest=0x7f05005e;
-        public static final int imgtransparent=0x7f05007f;
         public static final int imgvs=0x7f05007e;
         public static final int inline=0x7f050007;
         public static final int large=0x7f050002;
@@ -1526,11 +1525,11 @@ containing a value of this type.
         public static final int txtnewbet=0x7f050055;
         public static final int txtselectedteam=0x7f050079;
         public static final int txtshowmsginlayout=0x7f05007c;
-        public static final int txtusername=0x7f050081;
-        public static final int txtuserpoint=0x7f050082;
+        public static final int txtusername=0x7f050080;
+        public static final int txtuserpoint=0x7f050081;
         public static final int up=0x7f05002c;
         public static final int useLogo=0x7f05000e;
-        public static final int userimage=0x7f050080;
+        public static final int userimage=0x7f05007f;
         public static final int withText=0x7f050017;
     }
     public static final class integer {
