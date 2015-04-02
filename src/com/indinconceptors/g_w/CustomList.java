@@ -88,6 +88,8 @@ public class CustomList  extends ArrayAdapter<String> implements OnClickListener
 		
 		AQuery aq = new AQuery(context);
 		aq.id(imageView).image(firstteamlogo.get(position));
+		
+		
 		aq.id(imageViewsecond).image(secondteamlogo.get(position));
 		
 		

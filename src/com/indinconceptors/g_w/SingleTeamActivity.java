@@ -14,8 +14,10 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.params.HttpParams;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.androidquery.AQuery;
 import com.indinconceptors.g_w.R;
 import com.indinconceptors.g_w.BetActivity.getresult;
 
@@ -24,15 +26,22 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SingleTeamActivity extends ActionBarActivity{
@@ -44,8 +53,8 @@ public class SingleTeamActivity extends ActionBarActivity{
 	HttpPost httppostgetsinglerecord;
 	Boolean internetactive;
 	HttpClient httpclient;
-	String accesstoken="1",strbetmatchid;
-
+	String accesstoken="1",strbetmatchid,firstteam,secondteam,firstteamLogo,secondteamLogo;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,16 +68,7 @@ public class SingleTeamActivity extends ActionBarActivity{
 		Toast.makeText(SingleTeamActivity.this,strbetmatchid , Toast.LENGTH_LONG).show(); 
 		
 		
-		try{
-       	         	     		     	     		
-		//	adapter=new SingleItem(context, matchid);
-//			Toast.makeText(SingleTeamActivity.this,matchid.toString() , Toast.LENGTH_LONG).show();
-			
-      		
-        }
-        catch (Exception e) {
-			e.printStackTrace();
-		}
+
 		
 		internetactive = isNetworkAvailable();
 		if(internetactive)
@@ -80,8 +80,7 @@ public class SingleTeamActivity extends ActionBarActivity{
 		else 
 	     {
 		    Toast.makeText(SingleTeamActivity.this,"Internet Not Connected",Toast.LENGTH_SHORT).show();
-	    	}
-		
+	    	}	
 		
 		
 	}
@@ -133,37 +132,66 @@ public class SingleTeamActivity extends ActionBarActivity{
 		 {
 			 super.onPostExecute(result1);
 			 
-			 
+			 Toast.makeText(SingleTeamActivity.this, "hii", Toast.LENGTH_SHORT).show();
 			 try 
-			 {		
-				 JSONObject jsonObj = new JSONObject(result);	
-				 Toast.makeText(SingleTeamActivity.this, "hii", Toast.LENGTH_SHORT).show();
-				 Toast.makeText(SingleTeamActivity.this,"Data:-"+ result.toString(), Toast.LENGTH_SHORT).show();
+			 {		JSONObject Jobject =  	new JSONObject(result);	
+			 
+			 if(Jobject!=null)
+			 {
+				// String access_token = Jobject.getString("MatchId");
 				 
-				 String access_token = "" + jsonObj.get("AccessToken");
-			     String firstteam= ""+jsonObj.get("FirstTeam");
-			     String secondteam= ""+jsonObj.get("SecondTeam");
+			      firstteam= Jobject.getString("FirstTeam");
+			      secondteam= Jobject.getString("SecondTeam");
 
-			     String firstteamLogo= ""+jsonObj.get("FirstTeamLogo");
-			     String secondteamLogo= ""+jsonObj.get("SecondTeamLogo");
-			     			    
-			     Toast.makeText(SingleTeamActivity.this, firstteam+secondteam, Toast.LENGTH_LONG).show();
-			     
-			     
-			    	     				  				    				 
-				 
+			      firstteamLogo= Jobject.getString("FirstTeamLogo");
+			      secondteamLogo= Jobject.getString("SecondTeamLogo");
+			      
+			    
+					
+					ImageView imageView = (ImageView) findViewById(R.id.imgoneInsingleteam);			
+					ImageView imageViewsecond = (ImageView) findViewById(R.id.imgsecondInsingleteam);
+								
+					AQuery aq = new AQuery(context);
+					aq.id(imageView).image(firstteamLogo);						
+					aq.id(imageViewsecond).image(secondteamLogo);
+					
+					
+					TextView tvfirstteamname = (TextView) findViewById(R.id.textfirstteamInsingleteam);
+					tvfirstteamname.setText(firstteam);
+					tvfirstteamname.setTextColor(Color.parseColor("#FFFFFF"));
+										
+					TextView tvsecondteamname = (TextView) findViewById(R.id.textsecondteamInsingleteam);
+					tvsecondteamname.setText(secondteam);
+					tvsecondteamname.setTextColor(Color.parseColor("#FFFFFF"));
+					
+			      Toast.makeText(SingleTeamActivity.this, firstteam+secondteam, Toast.LENGTH_LONG).show();
+			      
+			      
+			 }
+			
+			     			     			    			    			        
+										 
 			} catch (Exception e) {
 				// TODO: handle exception
-				
-				Toast.makeText(SingleTeamActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+				Toast.makeText(SingleTeamActivity.this, "error", Toast.LENGTH_SHORT).show();
+				//Toast.makeText(SingleTeamActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
 			}
 			 
 		 }	
 	 }
 		
 	
+	
+	
+	
+	
+	}
+		
+	
+		 
+
 
 	
 	
 	
-}
+

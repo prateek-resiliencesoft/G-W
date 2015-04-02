@@ -2,31 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-      android:background="@drawable/dashboardbg" 
+    android:background="@drawable/mainbg"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.indinconceptors.g_w.SingleTeamActivity" >
-
     
     
-   <LinearLayout
+    
+    
+    
+    
+     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="30dp"
-                      
+        android:layout_height="25dp"              
         android:orientation="horizontal" >
-
+             
           <View
              android:layout_width="0dp"
              android:layout_height="match_parent"
              android:layout_weight=".20" />
 
     <TextView
-        android:id="@+id/textfirstteam"
+        android:id="@+id/textfirstteamInsingleteam"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="0.26"
+       
         android:gravity="left"
         android:text="" />
 
@@ -36,10 +39,11 @@
              android:layout_weight="1" />
 
     <TextView
-        android:id="@+id/textsecondteam"
+        android:id="@+id/textsecondteamInsingleteam"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="0.25"
+         
         android:gravity="right"
         android:text="" />
     
@@ -58,7 +62,7 @@
 
      <LinearLayout
          android:layout_width="fill_parent"
-         android:layout_height="67dp"
+         android:layout_height="70dp"
          android:gravity="center"
          android:orientation="horizontal" >
          
@@ -68,10 +72,12 @@
              android:layout_weight=".20" />
           
             <ImageView
-                android:id="@+id/imgone"
+                android:id="@+id/imgoneInsingleteam"
                 android:layout_width="70dp"
                 android:layout_height="70dp"                 
                 android:layout_gravity="left"
+                  
+               android:background="@android:color/transparent"    
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
             
@@ -80,13 +86,36 @@
                   android:layout_width="0dp"
                   android:layout_height="match_parent"
                   android:layout_weight="1" />
+             
+             
+             
+             
+             <ImageView
+                android:id="@+id/imgvs"
+                android:layout_width="70dp"
+                android:layout_height="70dp"                 
+                android:layout_gravity="left"
+                android:background="@drawable/vs_icon"               
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" />
+             
+             
+             
+             
+             
+             <View
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1" />
+             
+             
      
            <ImageView
-                android:id="@+id/imgsecond"
-                android:layout_width="70dp"
+                android:id="@+id/imgsecondInsingleteam"
+                android:layout_width="70dp"              
                 android:layout_height="70dp"
                 android:layout_gravity="right"
-                
+               android:background="@android:color/transparent"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter" />
             <View
@@ -94,125 +123,15 @@
              android:layout_height="match_parent"
              android:layout_weight=".20" />
                
-        </LinearLayout>
-        
-      <LinearLayout
-          android:layout_width="fill_parent"
-          android:layout_height="43dp"
-          android:gravity="center" >
+        </LinearLayout> 
 
-           <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-          <TextView
-          android:id="@+id/textamount"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-<View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-      <TextView
-          android:id="@+id/texttime"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-<View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-      <TextView
-          android:id="@+id/textmatchid"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-<View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-      <TextView
-          android:id="@+id/textmatchresult"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-
-          
-          <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-          
-        </LinearLayout>
-        
-      <LinearLayout
-          android:layout_width="fill_parent"
-          android:layout_height="60dp"
-          android:gravity="center" >
-              
-        <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />  
-          
-           <TextView
-          android:id="@+id/textfirstteampoint"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-           
-           <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-
-      <TextView
-          android:id="@+id/textsecondteampoint"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-      
-      
-      <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-
-      <TextView
-          android:id="@+id/textstreventdate"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-      
-      <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-
-     
-      <TextView
-          android:id="@+id/texteventdate"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="" />
-                   
-          
-      <View
-             android:layout_width="0dp"
-             android:layout_height="match_parent"
-             android:layout_weight=".20" />
-          
-           
-        </LinearLayout>
-         
-      
-      <LinearLayout
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:orientation="vertical" >
     </LinearLayout>
-      
-   
+
+    
 
 </RelativeLayout>
